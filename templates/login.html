@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href= "{{url_for('static',filename='design.css')}}" >
+    <title>Login</title>
+    <style>
+        .msg{
+            background-color: rgba(255, 255, 255, 0.472);
+            color:rgb(184, 219, 55);
+            font-family: sans-serif;
+            font-size: 1.4em;
+            width: fit-content;
+            margin: 2em auto 0.5em auto;
+            border-radius: 1em;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body class="bang">
+    {%if bacc:%}
+        <div class="msg">User_ID not found!</div>
+    {% endif %}
+    {%if bpass:%}
+        <div class="msg">Incorrect password! Please re-enter.</div>
+    {% endif %}
+    {%if bfree:%}
+        <div class="msg">You are no longer authorized!, kindly contact admin for further support.</div>
+    {% endif %}
+    <form  class="sang" action="/logindata" method="POST">
+        <h1>app login page </h1>
+        <input type="text" placeholder="user-id" name="user_id" autocomplete="none"> 
+        <input type="password" placeholder="password" name="password"> 
+        <input type="submit">
+        <p style="color:white;">Don't have account?</p> <a class="bottom" href="register.html">Sign Up here</a>
+    </form>
+</body>
+</html> 

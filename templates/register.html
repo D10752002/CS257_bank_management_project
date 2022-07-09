@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='design.css')}}">
+    <title>register</title>
+</head>
+<body class="em">
+    <form style="height: fit-content;" action="/registering" method="POST">
+        <div class="yuv">  
+            <br><br><br><br>
+        <h1> Sign Up as new customer</h1>
+            <input type="text" placeholder="enter your name"required name="username" autocomplete="none">
+            <input type="text" placeholder="Enter your email"required name="email_id" autocomplete="none">
+            <input type="text" placeholder="Enter your phone number"required name="phone_number" autocomplete="none">
+            <input type="text" placeholder="Enter your address"required name="address_info" autocomplete="none">
+            <h4 style="color: indianred;">DATE OF BIRTH:</h4>
+            <input type="date" placeholder="Date of Birth"required name="DOB" style="opacity: 80%; border-radius: 100cm;">
+            <input type="text" placeholder="pan card number"required name="PAN">
+            <input type="text" placeholder="Enter your emergency contact" name="emergency_number" autocomplete="none">
+            <input type="text" placeholder="Enter your occupation"required name="occupation" autocomplete="none">
+            <input type="text" placeholder="Enter your income" name="income" autocomplete="none">
+            <!--input type="file" placeholder="upload your photo"required-->
+            <input type="password" placeholder="create password"required name="password">  
+            <input type="password" placeholder="confirm password"required name="password_verif">
+            <input type="submit" value="submit">    
+        </div>
+    </form>
+    
+</body>
+</html>
